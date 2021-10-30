@@ -1,0 +1,72 @@
+<div class="row">
+    <div class="col-12">
+        <h4 class="text-center">Creating Purchase Order</h4>
+        <br>
+        <br>
+    </div>
+</div>
+<form>
+    <div class="row">
+        <div class="col-sm-1">
+
+        </div>
+        <div class="col-sm-2">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Supplier</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected value="{{0}}">Any</option>
+                    <option *ngFor="let d of suppliers" value="{{d.supplierID}}">{{d.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Location</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected value="{{0}}">Any</option>
+                    <option *ngFor="let d of suppliers" value="{{d.supplierID}}">{{d.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Item</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected value="{{0}}">Any</option>
+                    <option *ngFor="let d of suppliers" value="{{d.supplierID}}">{{d.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">User</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected value="{{0}}">Any</option>
+                    <option *ngFor="let d of suppliers" value="{{d.supplierID}}">{{d.name}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">&nbsp;</label><br>
+                <button type="button" class="btn w-100 btn-primary">Search</button>
+            </div>
+        </div>
+        <div class="col-sm-1">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">&nbsp;</label><br>
+                <button type="button" class="btn w-100 btn-warning">Create</button>
+            </div>
+        </div>
+        <div class="col-sm-1">
+
+        </div>
+    </div>
+</form>
+<div class="row">
+    <div class="col-12">
+        <br>
+        <br>
+        <router-outlet></router-outlet>
+    </div>
+</div>

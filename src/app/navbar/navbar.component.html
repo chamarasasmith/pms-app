@@ -1,0 +1,33 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a routerLink="/home/index" class="navbar-brand" href="#">PMS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a routerLink="/home/index" class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false" style="outline-style: none;">
+                        Purchase Orders
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a routerLink="/home/po-create" class="dropdown-item" href="#">Create</a></li>
+                        <li><a routerLink="/home/po-approve" class="dropdown-item" href="#">Approve</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a routerLink="/home/po-search" class="dropdown-item" href="#">Search</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <a class="btn btn-outline-secondary" href="/login">Logout</a>
+            </form>
+        </div>
+    </div>
+</nav>
