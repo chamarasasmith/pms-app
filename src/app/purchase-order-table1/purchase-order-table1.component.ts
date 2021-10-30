@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IRequisition } from '../interfaces/irequisition';
 import { PurchaseRequisitionService } from '../services/purchase-requisition.service';
 
 declare var $: any;
@@ -9,17 +10,20 @@ declare var $: any;
   styleUrls: ['./purchase-order-table1.component.css'],
 })
 export class PurchaseOrderTable1Component implements OnInit {
-  data: any = [];
+  data: IRequisition[] = [];
 
   constructor(private purchaseRequisitionService: PurchaseRequisitionService) {}
 
   ngOnInit(): void {
-    $(document).ready(function () {
-      $('#example').DataTable();
-    });
-
     this.purchaseRequisitionService.getAllRequisitions().subscribe((res) => {
       this.data = res;
+      this.SetDataTable();
+    });
+  }
+
+  SetDataTable() {
+    $(document).ready(function () {
+      $('#example').DataTable();
     });
   }
 }
